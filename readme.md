@@ -29,7 +29,7 @@ Use the AWS CLI to connect to AWS:
 ### 2. Deploy a website
   - deploy angular app to S3 bucket
   - host site behind Cloudfront
-  - configure Route53 to a domain to said CloudFront
+  - configure Route53 to point a domain to CloudFront
 
 ### 3. Add backend functionality
   - add a DynamoDB table
