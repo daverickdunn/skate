@@ -1,0 +1,7 @@
+{
+  "/api":{
+    "target": "https://skate.64bit.cyou",
+    "secure": true,
+    "changeOrigin": true
+  }
+}
