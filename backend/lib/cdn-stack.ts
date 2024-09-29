@@ -8,15 +8,17 @@ import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
 import { Construct } from 'constructs';
 
-interface SkateStackProps extends cdk.StackProps {
+interface CdnStackProps extends cdk.StackProps {
   domainName: string
   siteDomain: string
   staticFilesPath: string
 }
 
-export class SkateStack extends cdk.Stack {
+export class CdnStack extends cdk.Stack {
 
-  constructor(scope: Construct, id: string, props: SkateStackProps) {
+  public distribution: cloudfront.Distribution;
+
+  constructor(scope: Construct, id: string, props: CdnStackProps) {
     super(scope, id, props);
 
     // Replace with your domain and subdomain
@@ -66,6 +68,8 @@ export class SkateStack extends cdk.Stack {
         },
       ],
     });
+
+    this.distribution = distribution;
 
     // Create Route53 alias record for the CloudFront distribution
     new route53.ARecord(this, 'SiteAliasRecord', {

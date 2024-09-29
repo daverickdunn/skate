@@ -34,7 +34,7 @@ Use the AWS CLI to connect to AWS:
 ### 3. Add backend functionality
   - add a DynamoDB table
   - add an API Gateway
-  - add some Lambadas to GET/POST/DELETE
+  - add some Lambdas to GET/POST/DELETE
 
 ### 4. Add frontend functionality
   - create some child components to:
